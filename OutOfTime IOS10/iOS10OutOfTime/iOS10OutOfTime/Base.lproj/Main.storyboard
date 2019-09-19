@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ch5-QG-iC0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Time Circuit View Controller-->
+        <scene sceneID="4XE-PN-1ZR">
+            <objects>
+                <viewController id="ch5-QG-iC0" customClass="TimeCircuitViewController" customModule="Outatime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NUO-yS-Ovn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="VXw-K2-78b">
+                                <rect key="frame" x="16" y="44" width="382" height="650"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESTINATION TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJF-B6-rnZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="30"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-g2-z0b">
+                                        <rect key="frame" x="0.0" y="207.5" width="382" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="30"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST TIME DEPARTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbv-0e-hPf">
+                                        <rect key="frame" x="0.0" y="415" width="382" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9E-KF-ksf">
+                                        <rect key="frame" x="0.0" y="622.5" width="382" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-FI-aoX">
+                                <rect key="frame" x="20" y="786" width="374" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIZ-k1-2lg">
+                                        <rect key="frame" x="103.5" y="0.0" width="167" height="34"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="SET DESTINATION TIME">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="OPd-UK-GOz" kind="presentation" identifier="ModalDestinationDatePickerSegue" id="dc9-4S-xl3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-kf-mZY">
+                                        <rect key="frame" x="129" y="42" width="116" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="TRAVEL BACK"/>
+                                        <connections>
+                                            <action selector="travelBackButtonTapped:" destination="ch5-QG-iC0" eventType="touchUpInside" id="8oG-5k-QnP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VwK-RV-p2T" firstAttribute="trailing" secondItem="JQg-FI-aoX" secondAttribute="trailing" constant="20" id="8SN-MP-nMC"/>
+                            <constraint firstItem="JQg-FI-aoX" firstAttribute="leading" secondItem="VwK-RV-p2T" secondAttribute="leading" constant="20" id="CZA-cS-Ayq"/>
+                            <constraint firstItem="JQg-FI-aoX" firstAttribute="bottom" secondItem="VwK-RV-p2T" secondAttribute="bottom" id="Tmn-AS-Ngl"/>
+                            <constraint firstItem="VwK-RV-p2T" firstAttribute="trailing" secondItem="VXw-K2-78b" secondAttribute="trailing" constant="16" id="czf-tg-9gG"/>
+                            <constraint firstItem="VXw-K2-78b" firstAttribute="leading" secondItem="VwK-RV-p2T" secondAttribute="leading" constant="16" id="eaq-GR-8Ba"/>
+                            <constraint firstItem="VXw-K2-78b" firstAttribute="top" secondItem="VwK-RV-p2T" secondAttribute="top" id="l5E-Kr-MH5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VwK-RV-p2T"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinationTimeLabel" destination="qJF-B6-rnZ" id="VOy-wZ-6YG"/>
+                        <outlet property="lastTimeDepartedLabel" destination="dbv-0e-hPf" id="zDE-n2-t1w"/>
+                        <outlet property="presentTimeLabel" destination="ZsM-g2-z0b" id="Mkg-N1-zHb"/>
+                        <outlet property="setDestinationButtonTapped" destination="SIZ-k1-2lg" id="0pd-kS-QQC"/>
+                        <outlet property="speedLabel" destination="L9E-KF-ksf" id="JgX-aa-3DM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekv-nB-rUG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186.95652173913044" y="91.741071428571431"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="wRP-Wq-dml">
+            <objects>
+                <viewController id="OPd-UK-GOz" customClass="DatePickerViewController" customModule="Outatime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7AP-vL-unM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teR-hH-du3">
+                                <rect key="frame" x="0.0" y="318" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="588112428.47953403">
+                                    <!--2019-08-21 20:33:48 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="OPd-UK-GOz" eventType="valueChanged" id="rlx-zR-f54"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="242" translatesAutoresizingMaskIntoConstraints="NO" id="UgX-Sm-bKw">
+                                <rect key="frame" x="46" y="832" width="327" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnY-fB-gRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="OPd-UK-GOz" eventType="touchUpInside" id="nch-PK-C1X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-U2-YJZ">
+                                        <rect key="frame" x="290" y="0.0" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="OPd-UK-GOz" eventType="touchUpInside" id="EXh-w8-pE4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AZq-1N-zWj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvM-tk-mFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="-327"/>
+        </scene>
+    </scenes>
+</document>
